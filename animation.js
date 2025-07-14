@@ -46,7 +46,7 @@ function fall() {
     if (y >= floor) {
         y = floor;
         bounceSound.currentTime = 0;
-        bounceSound.play();
+        bounceSound.play().catch(() => {});
 
 
         ball.classList.add('glow');
